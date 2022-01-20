@@ -12,7 +12,7 @@ The approach is simple:
 
 Bacaro _et al_ propose two taxonomic distance measures. One is based on tree parsimony, the other based on differences in Linnean classification of taxa. For simplicity's sake (namely to avoid tree-building), we implement only the latter.
 
-See the docs for more info of the method.
+See the [Methodology doc](docs/Methodology.ipynb) for more info of the method.
 
 ## Requirements
 Requires python >= 3.6.0. <br>
