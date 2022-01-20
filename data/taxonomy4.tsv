@@ -1,0 +1,45 @@
+Feature ID	Taxon	Confidence
+e64e9c96402909bbbebd3e5e7fdeb291	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9976173849305644
+e06c384ce803f881861763d8d8872414	d__Eukaryota; p__Protalveolata; c__Syndiniales; o__Syndiniales; f__Syndiniales; g__Amoebophrya; s__eukaryote_clone	0.9806297745537492
+00e01bfa14e82d20f972b7395f806ac5	d__Eukaryota; p__Prymnesiophyceae; c__Prymnesiophyceae; o__Prymnesiales; f__Prymnesiales; g__Chrysochromulina; s__uncultured_eukaryote	0.8734785346440757
+2ab15d85fc855f7a19279c344374de04	d__Eukaryota; p__Dinoflagellata; c__Dinophyceae	0.9301509617565393
+04bffd116c67ffcb8fe463b004eeb62c	d__Eukaryota; p__Protalveolata; c__Syndiniales; o__Syndiniales; f__Syndiniales_Group_I; g__Syndiniales_Group_I; s__uncultured_eukaryote	0.8106752432187269
+5f5dadf94c7d664545e648e7a24bdc89	d__Eukaryota; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__Paracalanus_parvus	0.9790478239679569
+72131dd1c51194b73aebf97e589fe623	d__Eukaryota; p__Ciliophora; c__Intramacronucleata; o__Spirotrichea; f__Oligotrichia	0.999970532519337
+2153def313d135059be1e64be37f2aa8	d__Eukaryota; p__Retaria; c__RAD_B; o__RAD_B; f__RAD_B; g__RAD_B; s__Spumellarian_radiolarian	0.862443178464262
+4e1daa95a166416e3978b43515427693	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9404597120772092
+a38d904ca0f71df35c0155a7938b091e	d__Eukaryota; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__Paracalanus_parvus	0.8066792862212356
+c3c121ecae4a6af0e6d694a0c8eb6605	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.94981125471836
+a2206044ff494a5849d7c6a03d8c771f	d__Eukaryota; p__Dinoflagellata; c__Dinophyceae; o__Gonyaulacales; f__Gonyaulacales; g__Neoceratium	0.9999856536341674
+7f3342434f0c8ab76943f5001a1db1e2	d__Eukaryota; p__Prymnesiophyceae; c__Prymnesiophyceae; o__Prymnesiales; f__Prymnesiales; g__Chrysochromulina	0.7433668036856713
+e7fc0351147edfcff6410ed1ca2fcb1a	d__Eukaryota; p__Retaria; c__RAD_B; o__RAD_B; f__RAD_B; g__RAD_B	0.9999990736864073
+80219b39bf478d612a0547888a124317	d__Eukaryota; p__Cercozoa; c__Thecofilosea; o__Cryomonadida; f__Protaspidae; g__Cryothecomonas	0.9116860235792688
+82d2bff1964e3faa15683463b201ba59	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9516831962847904
+c1cfe922286ae48255b36a84d2d48f3d	d__Eukaryota; p__Dinoflagellata; c__Dinophyceae	0.9332875675566934
+a9ffe776e3c78a38c681287b8f3fd33d	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9312235024598475
+e801f585a1fb25c26dddea58b82212f1	d__Eukaryota	0.9999999999997661
+924d17617f289b63ef3e78f884a74af5	d__Eukaryota; p__Cercozoa; c__Thecofilosea; o__Cryomonadida; f__Protaspidae; g__Cryothecomonas	0.9070759714776278
+3b750c3c0fb9b553d84fa3fa7f2ed123	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.943290461882576
+cc476b5aab1858575e8e4e9c218ae567	d__Eukaryota; p__Retaria; c__RAD_B; o__RAD_B; f__RAD_B; g__RAD_B	0.9999990941308652
+f39fb07c0157560872ee0f4ef26e7fb5	d__Eukaryota; p__Protalveolata; c__Syndiniales; o__Syndiniales; f__Syndiniales; g__Amoebophrya; s__eukaryote_clone	0.9386907961298382
+db95a7fa0830106782c7ddbf6376023b	d__Eukaryota; p__Protalveolata; c__Syndiniales; o__Syndiniales; f__Syndiniales; g__Amoebophrya; s__eukaryote_clone	0.9795741656821149
+1316f886f707f87799c915770b08569b	d__Eukaryota; p__Protalveolata; c__Syndiniales; o__Syndiniales; f__Syndiniales_Group_I; g__Syndiniales_Group_I; s__uncultured_eukaryote	0.9428695277150593
+44ef5495dd7f48e8fc206592b9c40d3d	d__Eukaryota; p__Protalveolata; c__Syndiniales; o__Syndiniales; f__Syndiniales; g__Amoebophrya; s__eukaryote_clone	0.9834817435335397
+ebe8c98a939d53aa08d4a08da42a2af8	d__Eukaryota; p__Retaria; c__RAD_B; o__RAD_B; f__RAD_B; g__RAD_B; s__Spumellarian_radiolarian	0.8377905267566359
+0f9b45bb56dd8db0297a48a4ea002dce	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9449699126462062
+9da69ce0a02eda1189f8819c5043bfdc	d__Eukaryota; p__Dinoflagellata; c__Dinophyceae; o__Gonyaulacales; f__Gonyaulacales; g__Neoceratium	0.9970651454845014
+8eac7ad47725d2454607ca728e2a2179	d__Eukaryota; p__Dinoflagellata; c__Dinophyceae	0.908630362412919
+687a3496178573c3c3040427dde01efa	d__Eukaryota; p__Ciliophora; c__Intramacronucleata; o__Conthreep; f__Phyllopharyngea; g__Acineta; s__uncultured_marine	0.9982364727687772
+ba9c159f72d3e5bd072f2ef762bfff06	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9515965404167106
+6f80adb38ceb3d0f7ba936f042cdfaa7	d__Eukaryota; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__Paracalanus_parvus	0.9855785191173733
+7ac230b7d24a478c00240943d6508422	d__Eukaryota; p__Arthropoda; c__Maxillopoda; o__Calanoida; f__Calanoida; g__Calanoida; s__Paracalanus_parvus	0.9771515160635917
+e0c51e86d61f7791256c708c2efb1202	d__Eukaryota; p__Retaria; c__RAD_B; o__RAD_B; f__RAD_B; g__RAD_B; s__Spumellarian_radiolarian	0.8015784402694576
+f58bdd4126b3822e0f80f23622a71436	d__Eukaryota; p__Ciliophora; c__Intramacronucleata; o__Conthreep; f__Phyllopharyngea; g__Acineta; s__uncultured_marine	0.9434040382930833
+47f5df9c15340d54dcaa9da80b888b5a	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9798282991947391
+701fedecd0e3a56df8218ceed546fa0d	d__Eukaryota; p__Ciliophora; c__Intramacronucleata; o__Conthreep; f__Phyllopharyngea; g__Acineta; s__uncultured_marine	0.9532610003230693
+accee91bda805a8567731da18c43ce4b	d__Eukaryota; p__Prymnesiophyceae; c__Prymnesiophyceae; o__Prymnesiales; f__Prymnesiales; g__Chrysochromulina	0.750083174030055
+4d60d30abeea292f90af2a25e3e497fc	d__Eukaryota; p__Cercozoa; c__Thecofilosea; o__Cryomonadida; f__Protaspidae; g__Cryothecomonas	0.9028397633805573
+733639c8985c9d5776b0448d0e8d99d7	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Guinardia; s__Guinardia_striata	0.9736344241138783
+b8445860f7c7860e77f636f8c3b778ac	d__Eukaryota	0.9999999996143552
+1dd9bfd7ffa6da8dd2dd4085bb068aa1	d__Eukaryota; p__Diatomea; c__Coscinodiscophytina; o__Coscinodiscophytina; f__Rhizosolenids; g__Leptocylindrus; s__uncultured_stramenopile	0.9987727659953135
+ec6cfa8c6f8a3e82229c2eb55ce7d9ff	d__Eukaryota; p__Protalveolata; c__Syndiniales; o__Syndiniales; f__Syndiniales; g__Amoebophrya; s__eukaryote_clone	0.9806743639864955
