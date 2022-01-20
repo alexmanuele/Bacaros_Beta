@@ -1,5 +1,4 @@
-taxonomy1.tsv
-taxonomy2.tsv
-taxonomy3.tsv
-taxonomy4.tsv
-
+data/taxonomy1.tsv
+data/taxonomy2.tsv
+data/taxonomy3.tsv
+data/taxonomy4.tsv

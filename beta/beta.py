@@ -6,7 +6,7 @@ def qiime2_tsv_to_taxa_list(file):
     df = pd.read_table(file)
     taxa = df[['Taxon']].drop_duplicates()['Taxon']
     return taxa
-    
+
 # For each taxon, create a list of the rank values.
 # Unassigned ranks will be left as "0"
 # The cardinality of the list is given as L. E.g. Species, L=7.
@@ -15,7 +15,7 @@ def taxon_to_list(taxon, L):
     assert type(L) == int
     n = np.zeros(L, dtype='object')
     for i, rank in enumerate(taxon.split(";")):
-        if i > L:
+        if i >= L:
             break
         n[i] = rank
     return n
@@ -63,9 +63,26 @@ def compare_plots(plotA, plotB, L):
     return delta_S
 
 def calculate_beta(samples, L):
+    #The beta diversity is just an average of the delta_S metrics
+    #We will also save a matrix of delta_S values.
+
+    #Empty matrix to put values in
+    matr = np.zeros((len(samples), len(samples)))
+    delta = pd.DataFrame(data=matr,
+                         index=[s['name'] for s in samples],
+                         columns=[s['name'] for s in samples])
     distances = []
+    records = []
+    #For each sample pair:
     pairs = it.combinations(samples, 2)
     for pair in pairs:
-        delta_S = compare_plots(pair[0], pair[1], L)
+        #calculate delta_S for the pair.
+        delta_S = compare_plots(pair[0]['taxa'], pair[1]['taxa'], L)
         distances.append(delta_S)
-    return np.asarray(distances).mean()
+        #Keep dicts to help populate the matrix.
+        records.append({'pair0': pair[0]['name'], 'pair1': pair[1]['name'], 'deltaS': delta_S})
+
+    for record in records:
+        delta.loc[record['pair0'], record['pair1']]= record['deltaS']
+    #Return the matrix and the average.
+    return delta.T.replace(0, np.nan), np.asarray(distances).mean()
