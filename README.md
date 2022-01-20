@@ -1,4 +1,4 @@
-# Bacaros_Beta
+# Bacaro's Beta
 Beta Diversity calculation of 16S read samples based on Bacaro, Ricotta, &amp; Mazzoleni (2007).
 
 ## About
