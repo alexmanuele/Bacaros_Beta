@@ -59,7 +59,7 @@ def compare_plots(plotA, plotB, L):
 
     TD = (row_minima.sum() + col_minima.sum()) / (dist.shape[0] + dist.shape[1])
 
-    delta_S = 1 - (TD / (L-1))
+    delta_S = 1 - (TD / L)
     return delta_S
 
 def calculate_beta(samples, L):
