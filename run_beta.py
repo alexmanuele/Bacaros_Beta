@@ -4,10 +4,15 @@ import sys
 import os
 
 parser = argparse.ArgumentParser(prog="Bacaro's Beta",
-                                usage="python run_beta.py -i infile -l int -o outdir",
+                                usage="python run_beta.py -i infile -m ['s','t'] -l int -o outdir",
                                 description="Calculate pairwise distances between classified OTU/ASV samples and beta diversity among samples."
 )
 parser.add_argument('--input', action='store', type=str, required=True)
+parser.add_argument('--metric',
+                    action='store',
+                    type=str,
+                    required=True
+                    )
 parser.add_argument('--l', action='store', type=int, required=True)
 parser.add_argument('--output', action='store', type=str, required=True)
 
@@ -17,9 +22,15 @@ if __name__ == '__main__':
         files = [line.strip('\n') for line in f.readlines()]
 
     L = args.l
+    metric = args.metric.lower()
+    try:
+        assert metric in ['s', 't']
+    except:
+        raise ValueError("metric must be one of 's' or 't'")
+
     samples = [{'name': ''.join(os.path.basename(file).split('.')[:-1]),
                 'taxa': beta.qiime2_tsv_to_taxa_list(file)} for file in files]
-    deltas, b = beta.calculate_beta(samples, L)
+    deltas, b = beta.calculate_beta(samples, L, metric)
     print("Beta Diversity for {0} samples: {1}".format(len(samples), b))
     print("Distance matrix:")
     print(deltas.to_markdown())

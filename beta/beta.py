@@ -38,7 +38,8 @@ def compare_taxa_lists(taxon1, taxon2):
         i -= 1
     return distance
 
-def compare_plots(plotA, plotB, L):
+# Delta S
+def delta_S(plotA, plotB, L):
     #Make an empty distance matrix with taxaA rows and taxaB columns
     matr = np.zeros((len(plotA), len(plotB)))
     dist = pd.DataFrame(data=matr, index=plotA, columns=plotB)
@@ -62,27 +63,61 @@ def compare_plots(plotA, plotB, L):
     delta_S = 1 - (TD / L)
     return delta_S
 
-def calculate_beta(samples, L):
+#delta T
+def sample_to_frame(sample, L):
+    records = []
+    for species in sample:
+        taxa = taxon_to_list(species, L)
+        for i, t in enumerate(taxa):
+            for check in ['unassigned', 'undefined']:
+                if t != 0:
+                    if check in t.lower():
+                        taxa[i] = 0
+        records.append({k:v for k, v in zip(range(len(taxa)), taxa)})
+
+    return pd.DataFrame.from_records(records).replace(0, np.nan)
+# This is the delta T metric
+def delta_T(sample1, sample2, L):
+    frame1 = sample_to_frame(sample1, L)
+    frame2 = sample_to_frame(sample2, L)
+
+    common = pd.concat([frame1, frame2]).drop_duplicates()
+    shared_nodes = 0
+    all_nodes = 0
+    for col in common.columns:
+        nodes = common[col].dropna().unique()
+        f1_nodes = frame1[col].dropna().unique()
+        f2_nodes= frame2[col].dropna().unique()
+        for node in nodes:
+            all_nodes += 1
+            if node in f1_nodes and node in f2_nodes:
+                shared_nodes += 1
+    return shared_nodes / all_nodes
+
+def calculate_beta(samples, L, metric):
     #The beta diversity is just an average of the delta_S metrics
     #We will also save a matrix of delta_S values.
 
     #Empty matrix to put values in
     matr = np.ones((len(samples), len(samples)))
-    delta = pd.DataFrame(data=matr,
+    deltaMatrix = pd.DataFrame(data=matr,
                          index=[s['name'] for s in samples],
                          columns=[s['name'] for s in samples])
     distances = []
     records = []
+    dfunc = {'s': delta_S,
+             't': delta_T}[metric]
     #For each sample pair:
     pairs = it.combinations(samples, 2)
     for pair in pairs:
         #calculate delta_S for the pair.
-        delta_S = compare_plots(pair[0]['taxa'], pair[1]['taxa'], L)
-        distances.append(delta_S)
+        delta = dfunc(pair[0]['taxa'], pair[1]['taxa'], L)
+        distances.append(delta)
         #Keep dicts to help populate the matrix.
-        records.append({'pair0': pair[0]['name'], 'pair1': pair[1]['name'], 'deltaS': delta_S})
+        records.append({'pair0': pair[0]['name'], 'pair1': pair[1]['name'], 'delta': delta})
 
     for record in records:
-        delta.loc[record['pair0'], record['pair1']]= record['deltaS']
+        deltaMatrix.loc[record['pair0'], record['pair1']]= record['delta']
+        deltaMatrix.loc[record['pair1'], record['pair0']]= record['delta']
     #Return the matrix and the average.
-    return delta.T, np.asarray(distances).mean()
+    return deltaMatrix.T, np.asarray(distances).mean()
