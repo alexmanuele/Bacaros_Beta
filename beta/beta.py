@@ -67,7 +67,7 @@ def calculate_beta(samples, L):
     #We will also save a matrix of delta_S values.
 
     #Empty matrix to put values in
-    matr = np.zeros((len(samples), len(samples)))
+    matr = np.ones((len(samples), len(samples)))
     delta = pd.DataFrame(data=matr,
                          index=[s['name'] for s in samples],
                          columns=[s['name'] for s in samples])
@@ -85,4 +85,4 @@ def calculate_beta(samples, L):
     for record in records:
         delta.loc[record['pair0'], record['pair1']]= record['deltaS']
     #Return the matrix and the average.
-    return delta.T.replace(0, np.nan), np.asarray(distances).mean()
+    return delta.T, np.asarray(distances).mean()
