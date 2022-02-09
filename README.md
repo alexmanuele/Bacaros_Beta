@@ -10,7 +10,7 @@ The approach is simple:
 - Construct a pairwise score between samples
 - Calculate the Beta Diversity using the pairwise score.
 
-Bacaro _et al_ propose two taxonomic distance measures. One is based on tree parsimony, the other based on differences in Linnean classification of taxa. For simplicity's sake (namely to avoid tree-building), we implement only the latter.
+Bacaro _et al_ propose two taxonomic distance measures. One is based on tree parsimony, the other based on differences in Linnean classification of taxa.
 
 See the [Methodology doc](docs/Methodology.ipynb) for more info of the method.
 
@@ -29,6 +29,7 @@ We recommend that you give the `taxonomy.tsv` files meaningful names, e.g. `samp
 This software accepts three arguments:
 ```
 --input: A textfile where each line is the filepath for a taxonomy.tsv file
+--metric: Indicates whether to use the delta_T value (parsimony) or delta_S value (Linnean) as described in the paper. Must be one of 's' or 't'
 --l: L value used in Bacaro's beta. Specifies the depth of Linnean taxonomy to compare taxa. E.g. 7 is species, 6 is genus, etc. Recommend 7
 --output: A directory that exists. Your output files will be written here.
 ```
@@ -41,15 +42,17 @@ To use Bacaros_beta:
 - invoke the program:
 
 `
-python run_beta.py --i my_data.txt --l 7 --o my_results.txt
+python run_beta.py --input my_data.txt --metric --l 7 --output my_results.txt
 `
 
 Your results will be printed to the console **and** saved in the directory you specified. 
+
+Please note that the metrics reported are **similarity** metrics. To create a dissimialirty matrix, simply calculate `1 - n` for each value `n` in the similarity matrix.
 
 ##### Test
 We have included a small test set to demonstrate the functionality of our software.<br>
 To run it (from the project directory):
 ```bash
 mkdir results
-python run_beta.py --i data/test_input.txt --l 7 --o results
+python run_beta.py --input data/test_input.txt --metric t --l 7 --output results
 ```
