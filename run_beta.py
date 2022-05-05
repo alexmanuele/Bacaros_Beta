@@ -32,8 +32,8 @@ if __name__ == '__main__':
                 'taxa': beta.qiime2_tsv_to_taxa_list(file)} for file in files]
     deltas, b = beta.calculate_beta(samples, L, metric)
     print("Beta Diversity for {0} samples: {1}".format(len(samples), b))
-    print("Distance matrix:")
-    print(deltas.to_markdown())
+    #print("Distance matrix:")
+    #print(deltas.to_markdown())
 
     outfile_csv = '{0}/{1}.csv'.format(args.output, ''.join(os.path.basename(args.input).split('.')[:-1]))
     outfile_txt = '{0}/{1}.txt'.format(args.output, ''.join(os.path.basename(args.input).split('.')[:-1]))
